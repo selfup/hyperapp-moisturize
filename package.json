@@ -1,0 +1,47 @@
+{
+  "name": "hyperapp-moisturize",
+  "description": "Dynamic action/state/view loading for Hyperapp!",
+  "version": "0.0.1",
+  "main": "dist/hyperapp-moisturize.js",
+  "jsnext:main": "src/index.js",
+  "module": "src/index.js",
+  "license": "MIT",
+  "repository": "selfup/hyperapp-moisturize",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "author": "Regis Boudinot (selfup)",
+  "keywords": [
+    "hyperapp",
+    "hyperapp-moisturize",
+    "dynamic loading",
+    "dynamic import",
+    "dynamic actions",
+    "dynamic state",
+    "dynamic views",
+    "async views",
+    "conditional routing"
+  ],
+  "scripts": {
+    "test": "jest --coverage --no-cache",
+    "build": "npm run bundle && npm run minify",
+    "bundle": "babel src/index.js --out-file src/tmp.js && rollup -i src/tmp.js -o dist/hyperapp-moisturize.js -m -f umd -n hyperappMoisturize && rm src/tmp.js",
+    "minify": "uglifyjs dist/hyperapp-moisturize.js -o dist/hyperapp-moisturize.js -mc pure_funcs=Object.defineProperty --source-map includeSources,url=hyperapp-moisturize.js.map",
+    "prepare": "npm run build",
+    "release": "npm run build && npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
+  },
+  "babel": {
+    "presets": "env"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "jest": "^22.0.4",
+    "rollup": "^0.53.0",
+    "uglify-js": "3.2.2"
+  }
+}

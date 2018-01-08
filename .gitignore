@@ -1,0 +1,18 @@
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log*
+yarn.lock
+
+# Misc
+examples
+notes.md
+node_modules
+coverage
+*.xml
+
+# Dist
+*.gz
+dist/
