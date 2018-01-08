@@ -8,7 +8,7 @@ After much deliberation on the Hyperapp repo itself ([Dynamic actions: How to ad
 
 ### Polyfills for Production
 
-Please use a polyfill for `Object.assign` in production when using this package :praying_hands:
+Please use a polyfill for `Object.assign` in production when using this package :pray:
 
 The idea is that if you need to dynamically import, or if you are routing, you should already be using webpack or rollup/parcel (no dynamic import) for your app anyways :guitar:
 
