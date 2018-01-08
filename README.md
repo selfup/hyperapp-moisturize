@@ -82,4 +82,4 @@ main.updateApp({ newState, newActions, newView })
 
 ### Example CodePen
 
-_Gotta publish the package first_ :rocket:
+https://codepen.io/selfup/pen/gooojE?editors=0010
