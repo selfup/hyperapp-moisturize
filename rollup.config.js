@@ -6,7 +6,7 @@ export default [{
     file: 'dist/hyperapp-moisturize.js',
     format: 'umd',
     name: 'hyperappMoisturize',
-    sourceMap: 'inline',
+    sourcemap: true,
   },
   plugins: [
     babel({

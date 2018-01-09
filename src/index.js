@@ -8,11 +8,13 @@ export default app => (initialState, initialActions, initialView, rootNode) => {
       Object.assign(initialActions, {
 
         moisturizedActionCall: ({ action, data }) => (state) => {
-          const result = action(data);
+          const dryAction = action(data);
 
-          return typeof result === 'function'
-            ? result(state, exposedActions)
-            : result;
+          if (typeof dryAction === 'function') {
+            return dryAction(state, exposedActions);
+          }
+
+          return dryAction;
         },
 
         updateApp: ({ state = {}, actions = {}, view = current.view }) => {
@@ -32,6 +34,7 @@ export default app => (initialState, initialActions, initialView, rootNode) => {
 
           return state;
         },
+
       }),
 
       newView,
