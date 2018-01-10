@@ -1,3 +1,5 @@
+_[Hyperapp](https://github.com/hyperapp/hyperapp) 1.0.1_
+
 # Moisturize your app today!
 
 Don't we all just love the word _moist_? Apprently not, but we also cringe at dynamically _upgrading_ immutable stores.
