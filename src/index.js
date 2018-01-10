@@ -17,12 +17,16 @@ export default app => (initialState, initialActions, initialView, rootNode) => {
           return dryAction;
         },
 
-        updateApp: ({ state = {}, actions = {}, view = current.view }) => {
+        updateApp: ({
+          newState = {},
+          newActions = {},
+          newView = current.view,
+        }) => {
           const newActionRefs = {};
 
-          Object.keys(actions).forEach((name) => {
+          Object.keys(newActions).forEach((name) => {
             newActionRefs[name] = data => exposedActions.moisturizedActionCall({
-              action: actions[name],
+              action: newActions[name],
               data,
             });
 
@@ -30,9 +34,9 @@ export default app => (initialState, initialActions, initialView, rootNode) => {
           });
 
           Object.assign(exposedActions, newActionRefs);
-          Object.assign(current, { view });
+          Object.assign(current, { view: newView });
 
-          return state;
+          return newState;
         },
 
       }),

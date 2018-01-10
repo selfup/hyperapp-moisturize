@@ -59,8 +59,8 @@ import moisturize from 'hyperapp-moisturize';
 const main = moisturize(app)(state, actions, view, document.body);
 
 import('./thing.js')
-  .then(({ state, actions, view }) => {
-    main.updateApp({ state, actions, view });
+  .then(({ state: newState, actions: newActions, view: newView }) => {
+    main.updateApp({ newState, newActions, newView });
   });
 ```
 
@@ -71,15 +71,15 @@ You don't have to pass all three options for it to work:
 ```js
 // JUST ONE
 
-main.updateApp({ actions });
+main.updateApp({ newActions });
 
 // OR TWO
 
-main.updateApp({ state, actions });
+main.updateApp({ newState, newActions });
 
 // OR THREE
 
-main.updateApp({ state, actions, view })
+main.updateApp({ newState, newActions, newView })
 ```
 
 ### Example CodePen
