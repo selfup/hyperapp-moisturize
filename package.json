@@ -1,7 +1,7 @@
 {
   "name": "hyperapp-moisturize",
   "description": "Dynamic action/state/view loading for Hyperapp!",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/hyperapp-moisturize.js",
   "jsnext:main": "src/index.js",
   "module": "src/index.js",
