@@ -35,9 +35,9 @@ npm install --save hyperapp-moisturize
 
 ### Purpose
 
-To dynamically change the state / actions / root view of your app!
+To dynamically change the state / actions / root view of your app :smile:
 
-If you read [this issue](https://github.com/hyperapp/hyperapp/issues/533) you will discover that there is more to this type of HOA than just dynamic actions!
+If you read [this issue](https://github.com/hyperapp/hyperapp/issues/533) you will discover that there is more to this type of HOA than just dynamic actions :pray:
 
 [**Caveats**](https://github.com/hyperapp/hyperapp/issues/533#issuecomment-355764579)
 
@@ -66,7 +66,7 @@ import('./thing.js')
   });
 ```
 
-That's it! Bam!
+That's it. Bam!
 
 You don't have to pass all three options for it to work:
 
